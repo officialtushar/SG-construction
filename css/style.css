@@ -6130,3 +6130,36 @@
 		color: #64685b;
 
 	}
+
+
+
+	.icon__whatsapp {
+
+
+
+		font-size: 30px;
+		color: #33BB47;
+
+	}
+
+	.icon__call {
+		font-size: 30px;
+	}
+
+
+	.icons {
+		display: flex;
+		position: relative;
+		top: 25px;
+	}
+
+	.link__whatsapp {
+		color: #fff;
+	}
+
+	.link__call {
+			color: #ff8400
+	}
+	.link__call:hover {
+		color: #ff8400
+	}
