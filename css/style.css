@@ -6158,8 +6158,30 @@
 	}
 
 	.link__call {
-			color: #ff8400
+		color: #ff8400
 	}
+
 	.link__call:hover {
 		color: #ff8400
+	}
+
+	/* Default visible section */
+	.section.active {
+		display: block;
+	}
+
+	.brick-section {
+		background: #f8f9fa;
+		padding: 60px 0;
+	}
+
+	.brick-heading {
+		font-weight: 700;
+		color: #b36b00;
+	}
+
+	.brick-text {
+		font-size: 16px;
+		color: #555;
+		line-height: 1.8;
 	}
