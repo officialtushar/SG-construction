@@ -218,6 +218,18 @@ if ($('.freelance-slider').length) {
 $(document).ready(function () {
 	
 
+	const sections = document.querySelectorAll('.section');
+		sections.forEach(section => {
+		section.style.display = 'none';
+	});
+
+	sections[0].style.display = 'block';
+	
+
+	console.log('sections of the website', sections);
+
+	
+
 
 	$(".owl-carousel").owlCarousel({
 

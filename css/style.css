@@ -6185,3 +6185,14 @@
 		color: #555;
 		line-height: 1.8;
 	}
+
+
+	.flex-viewport {
+		    height: 500px;
+	}
+	
+
+	.image-resize {
+		height: 150px !important;
+	}
+
