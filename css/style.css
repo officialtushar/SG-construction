@@ -5844,8 +5844,16 @@
 		}
 
 		.top-social-icons {
-			float: none;
+			float: right;
 			margin-top: 5px;
+
+		}
+
+		.icons__linking {
+			justify-content: space-around;
+			display: flex;
+			position: relative;
+			top: 0px !important;
 		}
 
 		.main-menu .navbar-header {
@@ -5871,6 +5879,8 @@
 			margin: 0px 0px 0px 15px;
 			border-radius: 0px;
 			background: #222;
+			top: 15px;
+			right:10px;
 		}
 
 		.main-menu .navbar-header .navbar-toggle .icon-bar {
@@ -6128,6 +6138,7 @@
 		top: 10px;
 		/* font-style: italic; */
 		color: #64685b;
+		z-index: 10000;
 
 	}
 
@@ -6188,11 +6199,10 @@
 
 
 	.flex-viewport {
-		    height: 500px;
+		height: 500px;
 	}
-	
+
 
 	.image-resize {
 		height: 150px !important;
 	}
-
