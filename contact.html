@@ -34,7 +34,7 @@
 
 
 
-   <header class="main-header">
+    <header class="main-header">
       <!--header-top start-->
       <div class="header-top">
         <!--container start-->
@@ -155,7 +155,7 @@
                   </div>
 
 
-                 
+
 
 
 
@@ -166,19 +166,20 @@
               </div>
             </div>
             <div class="col-md-2 col-sm-12">
-               <div class="icons">
-                    <a href="https://wa.me/447459206595" target="_blank" class="btn whatsapp__hover" style="background-color:#33BB47;">
-                      <div id="info-btn" class="fab fa-whatsapp " style="color: #fff;"></div>&nbsp;
-                       <span  class="link__whatsapp">Whatsapp</span>
+              <div class="icons">
+                <a href="https://wa.me/447459206595" target="_blank" class="btn whatsapp__hover"
+                  style="background-color:#33BB47;">
+                  <div id="info-btn" class="fab fa-whatsapp " style="color: #fff;"></div>&nbsp;
+                  <span class="link__whatsapp">Whatsapp</span>
 
-                    </a>
+                </a>
 
-                    <a href="tel:+447459206595"  target="_blank" class="btn link__call">
-                      <div id="info-btn" class="fas fa-phone link__call"></div>&nbsp;
-                      <span class="link__call"> Click To Call</span>
+                <a href="tel:+447459206595" target="_blank" class="btn link__call">
+                  <div id="info-btn" class="fas fa-phone link__call"></div>&nbsp;
+                  <span class="link__call"> Click To Call</span>
 
-                    </a>
-                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -278,7 +279,7 @@
                 <div class="details">
                   <h3>Visit our office</h3>
                   <p> <strong>57 Saxon Road, Ilford</strong> <br>
-                   London, IG1 2PB</p>
+                    London, IG1 2PB</p>
                 </div>
               </div>
             </div>
@@ -332,7 +333,9 @@
           <h3>Drop <span>your massege</span></h3>
 
         </div>
-        <form action="#" method="POST" id="xs-contact-form" class="xs-form">
+
+        <!-- old -->
+        <!-- <form action="#" method="POST" id="xs-contact-form" class="xs-form">
           <div class="row">
             <div class="col-md-6">
               <input type="text" class="form-control" name="name" placeholder="Your name" id="xs_contact_name">
@@ -359,7 +362,45 @@
             <button class="main-btn btn-1 btn-1e">SEND MESSAGE</button>
           </div>
 
+        </form> -->
+
+
+        <!-- New Form -->
+        <form action="https://api.web3forms.com/submit" method="POST" class="xs-form">
+          <input type="hidden" name="access_key" value="9083d43a-fc09-428e-85e8-e80b4f1c59f5">
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control" name="name" placeholder="Your name" id="name">
+              <small class="text-danger" id="nameError"></small>
+            </div>
+
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="Your email" id="email">
+              <small class="text-danger" id="emailError"></small>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control" name="phone" placeholder="Your phone number" id="phone">
+              <small class="text-danger" id="phoneError"></small>
+            </div>
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" id="subject">
+            </div>
+          </div>
+
+          <textarea name="message" placeholder="Message" id="message" class="form-control message-box"
+            rows="6"></textarea>
+          <small class="text-danger" id="messageError"></small>
+
+          <div class="readmore text-center mt-3">
+            <button type="submit" onclick="resetFormFields()" class="main-btn btn-1 btn-1e">SEND MESSAGE</button>
+          </div>
+
         </form>
+
       </div>
       <!--container end-->
 
@@ -419,7 +460,7 @@
 
     <!--footer-sec start-->
 
-     <footer class="footer-sec">
+    <footer class="footer-sec">
       <!--container start-->
       <div class="container">
         <!--row start-->
@@ -673,10 +714,72 @@
 
 
     ColorSwitcher.init(colorSheets);
+
+
+
   </script>
 
   <script src="js/script.js"></script>
   <!--jquery end-->
+
+  <script>
+
+
+    document.getElementById("xs-contact-form").addEventListener("submit", function (e) {
+
+      let isValid = true;
+
+      // Get values
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let phone = document.getElementById("phone").value.trim();
+      let message = document.getElementById("message").value.trim();
+
+      // Reset errors
+      document.querySelectorAll(".text-danger").forEach(el => el.innerText = "");
+
+      // Name validation
+      if (name === "") {
+        document.getElementById("nameError").innerText = "Name is required";
+        isValid = false;
+      }
+
+      // Email validation
+      let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (email === "") {
+        document.getElementById("emailError").innerText = "Email is required";
+        isValid = false;
+      } else if (!email.match(emailPattern)) {
+        document.getElementById("emailError").innerText = "Enter valid email";
+        isValid = false;
+      }
+
+      // Phone validation (10 digit India)
+      let phonePattern = /^[6-9]\d{9}$/;
+      if (phone === "") {
+        document.getElementById("phoneError").innerText = "Phone is required";
+        isValid = false;
+      } else if (!phone.match(phonePattern)) {
+        document.getElementById("phoneError").innerText = "Enter valid phone number";
+        isValid = false;
+      }
+
+      // Message validation
+      if (message.length < 10) {
+        document.getElementById("messageError").innerText = "Message must be at least 10 characters";
+        isValid = false;
+      }
+
+      // Stop submit if invalid
+      if (!isValid) {
+        e.preventDefault();
+      }
+    });
+
+
+
+
+  </script>
 </body>
 
 </html>
