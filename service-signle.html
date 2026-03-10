@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!-- Fav Icon -->
   <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Style CSS -->
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -26,6 +26,88 @@
   <link href="css/style_slider.css" rel="stylesheet">
   <link href="rs-plugin/css/settings.css" rel="stylesheet">
   <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+
+  <style>
+    /* paragraph */
+
+    /* Section */
+    .brickwork-section {
+      padding: 70px 20px;
+      background: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container */
+
+
+    /* Title */
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    /* Paragraph */
+    .brick-description {
+      text-align: center;
+      font-size: 17px;
+      color: #555;
+      line-height: 1.8;
+      max-width: 850px;
+      margin: 0 auto 40px auto;
+    }
+
+    /* Points Grid */
+    .brick-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    /* Each Point */
+    .point {
+      background: #fff;
+      padding: 15px 18px;
+      border-radius: 6px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      font-size: 16px;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    .point:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Responsive */
+    @media (max-width:768px) {
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .brick-description {
+        font-size: 15px;
+      }
+
+      .brick-points {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        width: 100%;
+      }
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -67,7 +149,7 @@
 
             <!--col start-->
 
-           <div class="col-md-5 col-sm-6 col-xs-12">
+            <div class="col-md-5 col-sm-6 col-xs-12">
               <ul class="top-social-icons">
                 <li><a href="#."><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
 
@@ -114,7 +196,8 @@
                 <!--main-menu start-->
                 <nav class="main-menu">
                   <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle" style="padding: 5px;" data-toggle="collapse"
+                      data-target=".navbar-collapse">
                       <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                     </button>
                   </div>
@@ -192,7 +275,7 @@
         <!--container start-->
         <div class="container clearfix">
           <!--row start-->
-         <div class="row">
+          <div class="row">
             <!--col start-->
             <div class="col-md-5 col-sm-5">
               <div class="logo"> <a href="index.html"> <img class="logo-default" src="images/logo_sg.png" alt=""
@@ -291,7 +374,7 @@
           <div class="col-md-8">
             <div id="brickwork" class="section">
 
-              <div id="main" role="main">
+              <!-- <div id="main" role="main">
                 <div class="slider">
                   <div class="flexslider innerslider">
                     <ul class="slides">
@@ -306,44 +389,78 @@
                     </ul>
                   </div>
                 </div>
+              </div> -->
+
+
+
+
+
+
+              <div class="slider" id="slider1">
+
+                <img src="images/allservices/brickwork/b1.jpeg" class="slide active">
+                <img src="images/allservices/brickwork/b2.jpeg" class="slide">
+                <img src="images/allservices/brickwork/b3.jpeg" class="slide">
+
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+
               </div>
 
 
 
-              <section class="brick-section">
+
+              <section class="brickwork-section">
                 <div class="container">
-                  <div class="row justify-content-center text-center">
-                    <div class="col-lg-8">
-                      <h2 class="brick-heading mb-4">Brick Work</h2>
 
-                      <p class="brick-text">
-                        At SG Construction, we provide high-quality brick work services that ensure strength,
-                        durability, and long-lasting performance for every project.
-                        Our skilled team uses premium bricks and modern techniques to build strong foundations, walls,
-                        and structures. We focus on proper alignment,
-                        accurate leveling, and excellent finishing to deliver a perfect construction result for
-                        residential and commercial buildings.
-                      </p>
+                  <h2 class="section-title">Brick Work</h2>
 
-                      <p class="brick-text">
-                        We are committed to maintaining safety standards, timely project completion, and customer
-                        satisfaction. From boundary walls and partition walls
-                        to complete building structures, our brick work solutions are designed to enhance the value and
-                        life of your property. Our goal is to provide
-                        reliable, cost-effective, and high-quality construction services that meet your expectations.
-                      </p>
+                  <p class="brick-description">
+                    Brick work is an essential part of construction used to build strong, durable, and long-lasting
+                    structures.
+                    It involves laying bricks in a systematic pattern using mortar made of cement, sand, and water to
+                    bind them together.
+                    Proper brick masonry ensures stability, strength, and resistance to weather conditions. It is widely
+                    used in
+                    residential, commercial, and industrial buildings due to its durability, fire resistance, and
+                    excellent insulation properties.
+                  </p>
 
-                    </div>
+                  <div class="brick-points">
+                    <div class="point">✔ Strong and durable construction</div>
+                    <div class="point">✔ Excellent thermal and sound insulation</div>
+                    <div class="point">✔ Fire-resistant and weather-resistant</div>
+                    <div class="point">✔ Proper bonding ensures structural stability</div>
+                    <div class="point">✔ Cost-effective building solution</div>
+                    <div class="point">✔ Easy maintenance and repair</div>
+                    <div class="point">✔ Suitable for load-bearing and partition walls</div>
+                    <div class="point">✔ Widely used in residential and commercial buildings</div>
                   </div>
+
                 </div>
               </section>
+
 
 
             </div>
 
             <div id="newbuild" class="section">
 
-              <div id="main" role="main">
+
+
+
+              <div class="slider" id="slider2">
+
+                <img src="images/allservices/new_build/new_build1.jpg" class="slide active">
+                <img src="images/allservices/new_build/new_build2.jpeg" class="slide">
+                <img src="images/allservices/new_build/new_build3.jpg" class="slide">
+
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+
+              </div>
+
+              <!-- <div id="main" role="main">
                 <div class="slider">
                   <div class="flexslider innerslider">
                     <ul class="slides">
@@ -358,35 +475,36 @@
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
 
 
-              <section class="brick-section">
+              <section class="brickwork-section">
                 <div class="container">
-                  <div class="row justify-content-center text-center">
-                    <div class="col-lg-8">
-                      <h2 class="brick-heading mb-4">New Build</h2>
 
-                      <p class="brick-text">
-                        At SG Construction, we provide high-quality brick work services that ensure strength,
-                        durability, and long-lasting performance for every project.
-                        Our skilled team uses premium bricks and modern techniques to build strong foundations, walls,
-                        and structures. We focus on proper alignment,
-                        accurate leveling, and excellent finishing to deliver a perfect construction result for
-                        residential and commercial buildings.
-                      </p>
+                  <h2 class="section-title">New Build</h2>
 
-                      <p class="brick-text">
-                        We are committed to maintaining safety standards, timely project completion, and customer
-                        satisfaction. From boundary walls and partition walls
-                        to complete building structures, our brick work solutions are designed to enhance the value and
-                        life of your property. Our goal is to provide
-                        reliable, cost-effective, and high-quality construction services that meet your expectations.
-                      </p>
+                  <p class="brick-description">
+                    A new build site refers to a construction project where a completely new structure is developed from
+                    the ground up on previously unused or cleared land. It involves multiple stages such as site
+                    preparation, foundation work, structural construction, and finishing. Proper planning, design, and
+                    project management are essential to ensure the building meets safety standards, quality
+                    requirements, and client expectations. New build sites are commonly used for residential homes,
+                    commercial buildings, and industrial facilities, offering modern designs, improved energy
+                    efficiency, and long-term durability.
+                  </p>
 
-                    </div>
+                  <div class="brick-points">
+                    <div class="point">✔ Complete construction from foundation to final finishing</div>
+                    <div class="point">✔ Includes site preparation, excavation, and leveling</div>
+                    <div class="point">✔ Designed according to modern architectural and safety standards</div>
+                    <div class="point">✔ Allows customization based on client requirements</div>
+                    <div class="point">✔ Uses new and high-quality construction materials</div>
+                    <div class="point">✔ Ensures better energy efficiency and modern infrastructure</div>
+                    <div class="point">✔ Suitable for residential, commercial, and industrial developments</div>
+
                   </div>
+
                 </div>
               </section>
 
@@ -396,53 +514,66 @@
             </div>
 
 
-          
+
 
 
             <div id="loft" class="section">
 
-              <div id="main" role="main">
+
+              <div class="slider" id="slider3">
+
+                <img src="images/allservices/loft/loft_1.jpeg" class="slide active">
+                <img src="images/allservices/loft/loft_2.jpeg" class="slide">
+
+
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+
+              </div>
+              <!-- <div id="main" role="main">
                 <div class="slider">
                   <div class="flexslider innerslider">
                     <ul class="slides">
                       <li data-thumb="images/allservices/loft/loft_1.jpeg"> <img
-                          src="images/allservices/loft/loft_1.jpeg" alt=""  /> </li>
+                          src="images/allservices/loft/loft_1.jpeg" alt="" /> </li>
                       <li data-thumb="images/allservices/loft/loft_2.jpeg"> <img
                           src="images/allservices/loft/loft_2.jpeg" alt="" /> </li>
 
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
 
 
-              <section class="brick-section">
+              <section class="brickwork-section">
                 <div class="container">
-                  <div class="row justify-content-center text-center">
-                    <div class="col-lg-8">
-                      <h2 class="brick-heading mb-4">Loft Conversions</h2>
 
-                      <p class="brick-text">
-                        At SG Construction, we specialize in high-quality loft conversion services that help you make
-                        the most of your unused attic space. Our expert team
-                        transforms your loft into a modern and functional area such as an extra bedroom, home office, or
-                        comfortable living space. We focus on smart planning,
-                        structural safety, and creative design to ensure the new space blends perfectly with your
-                        existing property while maintaining strength and durability.
-                      </p>
+                  <h2 class="section-title">Loft Conversion</h2>
 
-                      <p class="brick-text">
-                        From initial consultation and design to construction and finishing, we manage every stage of the
-                        project with professionalism and attention to detail.
-                        Using premium materials and modern construction techniques, we ensure excellent results that
-                        enhance natural light, improve comfort, and increase
-                        property value. Our goal is to deliver stylish, practical, and cost-effective loft conversion
-                        solutions on time and within your budget.
-                      </p>
+                  <p class="brick-description">
+                    A loft conversion is a construction process that transforms unused attic or roof space into a
+                    functional living area.
+                    It is a popular way to increase the usable space in a home without extending the building footprint.
+                    Loft conversions
+                    can be used to create additional bedrooms, home offices, study areas, or storage rooms. With proper
+                    design, structural
+                    support, insulation, and ventilation, a loft conversion can seamlessly integrate with the existing
+                    structure while
+                    enhancing comfort, property value, and overall functionality.
+                  </p>
 
-                    </div>
+                  <div class="brick-points">
+                    <div class="point">✔ Converts unused attic space into a functional room</div>
+                    <div class="point">✔ Ideal for creating bedrooms, offices, or living areas</div>
+                    <div class="point">✔ Increases property value and usable space</div>
+                    <div class="point">✔ Requires proper structural assessment and planning</div>
+                    <div class="point">✔ Includes insulation, ventilation, and lighting installation</div>
+                    <div class="point">✔ Designed to blend with the existing building structure</div>
+                    <div class="point">✔ Cost-effective alternative to moving to a larger property</div>
+
                   </div>
+
                 </div>
               </section>
 
@@ -454,49 +585,70 @@
 
             <div id="renovation" class="section">
 
-              <div id="main" role="main">
-                <div class="slider">
-                  <div class="flexslider innerslider">
-                    <ul class="slides">
-                      <li data-thumb="images/allservices/renovation/renovations_1.jpeg"> <img
-                          src="images/allservices/renovation/renovations_1.jpeg" alt="" /> </li>
-                      <li data-thumb="images/allservices/renovation/renovations_2.jpeg"> <img
-                          src="images/allservices/renovation/renovations_2.jpeg" alt="" /> </li>
+              <div class="slider" id="slider4">
 
-                    </ul>
-                  </div>
-                </div>
+                <img src="images/allservices/renovation/renovations_1.jpeg" class="slide active">
+                <img src="images/allservices/renovation/renovations_2.jpeg" class="slide">
+                <img src="images/allservices/renovation/renovations_3.jpeg" class="slide">
+
+
+
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+
               </div>
 
 
-
-              <section class="brick-section">
+              <section class="brickwork-section">
                 <div class="container">
-                  <div class="row justify-content-center text-center">
-                    <div class="col-lg-8">
-                      <h2 class="brick-heading mb-4">Renovation</h2>
 
-                      <p class="brick-text">
-                       Renovation services by SG Construction are designed to transform your existing space into a modern, functional, and stylish environment. Whether it is a complete home makeover, office upgrade, or interior improvement, our experienced team focuses on quality workmanship, innovative design, and attention to detail. We work closely with our clients to understand their vision and deliver customized renovation solutions that enhance comfort, beauty, and practicality.
-                      </p>
+                  <h2 class="section-title">Renovation</h2>
 
-                      <p class="brick-text">
-                        From planning and structural changes to finishing and decoration, we manage every stage of the renovation process with professionalism and efficiency. We use high-quality materials and modern techniques to ensure long-lasting results and customer satisfaction. Our goal is to improve the value, appearance, and functionality of your property while completing the project on time and within your budget.
-                      </p>
+                  <p class="brick-description">
+                    Renovation in construction refers to the process of improving, updating, or restoring an existing
+                    building to enhance its functionality, appearance, and structural integrity. It may involve
+                    repairing damaged structures, upgrading interiors, replacing outdated materials, or modernizing the
+                    design to meet current standards. Renovation projects help extend the life of a property while
+                    improving comfort, safety, and energy efficiency. It is commonly carried out in residential,
+                    commercial, and industrial buildings to refresh the space and increase its overall value.
+                  </p>
 
-                    </div>
+                  <div class="brick-points">
+                    <div class="point">✔ Improves the appearance and functionality of existing buildings</div>
+                    <div class="point">✔ Includes repairs, upgrades, and structural improvements</div>
+                    <div class="point">✔ Helps extend the lifespan of the property</div>
+                    <div class="point">✔ Enhances safety and modern building standards</div>
+                    <div class="point">✔ Modernizes interior and exterior design</div>
+                    <div class="point">✔ Improves energy efficiency and insulation</div>
+                    <div class="point">✔ Increases property value and usability</div>
+                    <div class="point">✔ Suitable for residential and commercial buildings</div>
+                    <div class="point">✔ Includes kitchen, bathroom, or full building upgrades</div>
+
                   </div>
+
                 </div>
               </section>
 
 
 
 
+
             </div>
 
-              <div id="extensions" class="section">
+            <div id="extensions" class="section">
 
-              <div id="main" role="main">
+              <div class="slider" id="slider3">
+
+                <img src="images/allservices/extension/extension_1.jpeg" class="slide active">
+                <img src="images/allservices/extension/extension_2.jpeg" class="slide">
+
+
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+
+              </div>
+
+              <!-- <div id="main" role="main">
                 <div class="slider">
                   <div class="flexslider innerslider">
                     <ul class="slides">
@@ -511,38 +663,40 @@
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
 
 
-              <section class="brick-section">
+              <section class="brickwork-section">
                 <div class="container">
-                  <div class="row justify-content-center text-center">
-                    <div class="col-lg-8">
-                      <h2 class="brick-heading mb-4">Extension</h2>
 
-                      <p class="brick-text">
-                        SG Construction offers reliable and high-quality extension services to help you expand your home
-                        or commercial space according to your growing needs.
-                        Whether you want to add a new room, extend your kitchen, or create a larger living or working
-                        area, our expert team ensures a smooth and stress-free
-                        construction process. We focus on blending the new structure perfectly with your existing
-                        building while maintaining strength, style, and functionality.
-                      </p>
+                  <h2 class="section-title">Extension</h2>
 
-                      <p class="brick-text">
-                        From initial planning and design to construction and final finishing, we handle every step with
-                        professionalism and attention to detail. We use modern
-                        construction methods and premium materials to ensure durability and long-term value. Our goal is
-                        to deliver extension solutions that not only increase
-                        your space but also enhance the comfort, appearance, and overall value of your property.
-                      </p>
+                  <p class="brick-description">
+                    An extension in construction refers to adding extra space to an existing building to improve its
+                    functionality and value.
+                    It allows homeowners and businesses to expand their property without relocating. Building extensions
+                    can include additional
+                    rooms, extended kitchens, extra floors, or larger living areas. With proper planning and
+                    high-quality materials, the new
+                    extension can blend seamlessly with the existing structure while maintaining durability, safety, and
+                    modern design standards.
+                  </p>
 
-                    </div>
+                  <div class="brick-points">
+                    <div class="point">✔ Increase living or working space</div>
+                    <div class="point">✔ Add new rooms, floors, or expanded areas</div>
+                    <div class="point">✔ Improve property value and usability</div>
+                    <div class="point">✔ Designed to match the existing structure</div>
+                    <div class="point">✔ Requires proper planning and permits</div>
+                    <div class="point">✔ Uses durable and high-quality materials</div>
+                    <div class="point">✔ Cost-effective alternative to relocation</div>
+                    <div class="point">✔ Suitable for residential and commercial properties</div>
+
                   </div>
+
                 </div>
               </section>
-
 
 
 
@@ -816,7 +970,7 @@
     ];
 
 
-    ColorSwitcher.init(colorSheets);
+    // ColorSwitcher.init(colorSheets);
   </script>
 
   <script src="js/script.js"></script>
@@ -833,6 +987,13 @@
     });
   </script>
   <!--jquery end-->
+
+
+  <script>
+
+
+
+  </script>
 </body>
 
 </html>
